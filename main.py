@@ -27,6 +27,11 @@ def circulo(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
+    "Draw circle from start to end."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
     
     "Native function from Turtle which lets you make a circle, add the parameter which is the radius."
     circle(50)
@@ -78,9 +83,17 @@ def store(key, value):
     "Store value in state at key."
     state[key] = value
     
+def store_color(iColor):
+
+    colour = state['store_color']
+    
+    if colour is None:
+        color('black','black')
+    else:
+        color(iColor, iColor)
 
 
-state = {'start': None, 'shape': line}
+state = {'start': None, 'shape': line, 'store_color': 'blue'}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
@@ -96,5 +109,4 @@ onkey(lambda: store('shape', circulo), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
-
 
