@@ -49,7 +49,17 @@ def rectangle(start, end):
 
 
 def triangle(start, end):
-    pass
+    "Draw a triangle. Iterate each side with a 120 angle to create 3 lines forming all 360 degrees of an equilateral triangle."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    
+    for count in range(3):
+        forward(end.x - start.x)
+        left(180-60)
+        
+    end_fill()
     
 
 def tap(x, y):
@@ -86,3 +96,5 @@ onkey(lambda: store('shape', circulo), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
+
+
