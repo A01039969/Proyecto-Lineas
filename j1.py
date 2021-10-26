@@ -35,10 +35,33 @@ def circulo(start, end):
     
     
 def rectangle(start, end):
-    pass
+    "Draw rectangle from start to end. Multiply the horizontal distance of a square to create a rectangle."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(2):
+        forward(2*(end.x - start.x))
+        left(90)
+        forward(end.x - start.x)
+        left(90)
+
+    end_fill()
 
 def triangle(start, end):
-    pass
+    "Draw a triangle. Iterate each side with a 120 angle to create 3 lines forming all 360 degrees of an equilateral triangle."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    
+    for count in range(3):
+        forward(end.x - start.x)
+        left(180-60)
+        
+    end_fill()
+    
 
 def tap(x, y):
     "Store starting point or draw shape."
