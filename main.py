@@ -1,3 +1,12 @@
+'Actividad 1 - Paint'
+'Equipo 5'
+'Marcelo Durán A01720893'
+'Rodolfo Sandoval A01720253'
+'Eduardo De La Rosa A0103996'
+'Alejandro Gonzalez A01570396'
+'Paola De La Rosa A01233794'
+
+
 from turtle import *
 from freegames import vector
 
@@ -106,7 +115,6 @@ onkey(lambda: store('shape', circulo), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
-
 
 
 
