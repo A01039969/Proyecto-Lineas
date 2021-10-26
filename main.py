@@ -27,11 +27,6 @@ def circulo(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-    "Draw circle from start to end."
-    up()
-    goto(start.x, start.y)
-    down()
-    begin_fill()
     
     "Native function from Turtle which lets you make a circle, add the parameter which is the radius."
     circle(50)
@@ -51,6 +46,8 @@ def rectangle(start, end):
         left(90)
         forward(end.x - start.x)
         left(90)
+    
+    end_fill()
 
 
 def triangle(start, end):
@@ -98,15 +95,20 @@ setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
-onkey(lambda: color('black'), 'K')
-onkey(lambda: color('white'), 'W')
-onkey(lambda: color('green'), 'G')
-onkey(lambda: color('blue'), 'B')
-onkey(lambda: color('red'), 'R')
+onkey(lambda: store_color('black'), 'K')
+onkey(lambda: store_color('white'), 'W')
+onkey(lambda: store_color('green'), 'G')
+onkey(lambda: store_color('blue'), 'B')
+onkey(lambda: store_color('red'), 'R')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circulo), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
+
+
+
+
+
 
