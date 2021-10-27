@@ -1,13 +1,13 @@
-"""Cannon, hitting targets with projectiles.
+'Actividad 4 -Juego del Tiro Parabólico '
+'Equipo 5'
+'Marcelo Durán A01720893'
+'Rodolfo Sandoval A01720253'
+'Eduardo De La Rosa A0103996'
+'Alejandro Gonzalez A01570396'
+'Paola De La Rosa A01233794'
 
-Exercises
 
-1. Keep score by counting target hits.
-2. Vary the effect of gravity.
-3. Apply gravity to the targets.
-4. Change the speed of the ball.
-
-"""
+"""Cannon, hitting targets with projectiles. """
 
 from random import randrange
 from turtle import *
@@ -73,7 +73,10 @@ def move():
 
     for target in targets:
         if not inside(target):
-            return
+            targets.remove(target)
+            target2 = vector(200, target.y)
+            targets.append(target2)
+
 
     ontimer(move, 40)
 
