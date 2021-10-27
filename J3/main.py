@@ -113,7 +113,7 @@ def move():
     dot(20, 'yellow')
     
 <<<<<<< HEAD
-    "Commit 2: los fantasmas se despegian por una iteracion de 10 para moverse mas rapido"
+    "Commit 2: los fantasmas se desplegan por una iteracion de 10 para moverse mas rapido"
 =======
 >>>>>>> c229dcbf2812136b248b677d4adaa11d2240e463
     for point, course in ghosts:
