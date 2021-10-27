@@ -112,7 +112,7 @@ def move():
     goto(pacman.x + 10, pacman.y + 10)
     dot(20, 'yellow')
     
-    "Commit 2 y 3 los fantasmas van mas rapido al cambiar las iteraciones de las posiciones en los vectores para los 2 ejes"
+    "Commit 2: los fantasmas se despegian por una iteracion de 10 para moverse mas rapido"
     for point, course in ghosts:
         if valid(point + course):
             point.move(course)
@@ -123,15 +123,7 @@ def move():
                 vector(0, 10),
                 vector(0, -10),
             ]
-            if abs(pacman - point) < 100:
-                options = [
-                vector(30, 0),
-                vector(-30, 0),
-                vector(0, 30),
-                vector(0, -30),
-            ]
     
-  
             plan = choice(options)
             course.x = plan.x
             course.y = plan.y
