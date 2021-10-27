@@ -1,3 +1,11 @@
+'Actividad 3 - Pacman'
+'Equipo 5'
+'Marcelo Durán A01720893'
+'Rodolfo Sandoval A01720253'
+'Eduardo De La Rosa A0103996'
+'Alejandro Gonzalez A01570396'
+'Paola De La Rosa A01233794'
+
 from random import choice
 from turtle import *
 from freegames import floor, vector
