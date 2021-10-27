@@ -1,17 +1,15 @@
-"""Snake, classic arcade game.
+'Actividad 2 - Snake'
+'Equipo 5'
+'Marcelo Durán A01720893'
+'Rodolfo Sandoval A01720253'
+'Eduardo De La Rosa A0103996'
+'Alejandro Gonzalez A01570396'
+'Paola De La Rosa A01233794'
 
-Exercises
-
-1. How do you make the snake faster or slower?
-2. How can you make the snake go around the edges?
-3. How would you move the food?
-4. Change the snake to respond to mouse clicks.
-
-"""
+"""Snake, classic arcade game."""
 
 from random import randrange, choice
 from turtle import *
-import time
 
 from freegames import square, vector
 
@@ -22,6 +20,7 @@ colors = ['green','yellow','black','blue','pink']
 snakeColor = choice(colors)
 colors.remove(snakeColor)
 foodColor = choice(colors)
+
 
 
 def change(x, y):
