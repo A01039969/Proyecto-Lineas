@@ -1,4 +1,4 @@
-'Actividad 4 -Juego del Tiro Parabólico '
+'Actividad 4 - Juego del Tiro Parabólico '
 'Equipo 5'
 'Marcelo Durán A01720893'
 'Rodolfo Sandoval A01720253'
