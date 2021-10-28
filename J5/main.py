@@ -1,3 +1,11 @@
+'Actividad 2 - Snake'
+'Equipo 5'
+'Marcelo Durán A01720893'
+'Rodolfo Sandoval A01720253'
+'Eduardo De La Rosa A0103996'
+'Alejandro Gonzalez A01570396'
+'Paola De La Rosa A01233794'
+
 """Memory, puzzle game of number pairs.
 
 Exercises:
@@ -30,6 +38,18 @@ def square(x, y):
     goto(x, y)
     down()
     color('black', 'white')
+    begin_fill()
+    for count in range(4):
+        forward(50)
+        left(90)
+    end_fill()
+    
+def color_square(x, y):
+    "Draw white square with black outline at (x, y)."
+    up()
+    goto(x, y)
+    down()
+    color('white', 'green')
     begin_fill()
     for count in range(4):
         forward(50)
@@ -96,8 +116,9 @@ def draw():
     if mark is not None and hide[mark]:
         x, y = xy(mark)
         up()
+        color_square(x,y)
         goto(x + 27, y)
-        color('black')
+        color('white')
         write(tiles[mark], font=('Arial', 30, 'normal'), align="center")
 
     update()
