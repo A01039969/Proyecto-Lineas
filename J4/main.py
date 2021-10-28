@@ -7,7 +7,7 @@
 'Paola De La Rosa A01233794'
 
 
-"""Cannon, hitting targets with projectiles. """
+""" Cannon, hitting targets with projectiles. """
 
 from random import randrange
 from turtle import *
