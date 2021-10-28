@@ -12,6 +12,7 @@ Exercises:
 
 from random import *
 from turtle import *
+import time
 
 from freegames import path
 
@@ -19,6 +20,7 @@ car = path('car.gif')
 tiles = list(range(32)) * 2
 state = {'mark': None}
 hide = [True] * 64
+cont_par = 0
 cont = 0
 
 
@@ -44,9 +46,18 @@ def xy(count):
     "Convert tiles count to (x, y) coordinates."
     return (count % 8) * 50 - 200, (count // 8) * 50 - 200
 
+def win():
+    clear()
+    goto(100,20)
+    write("Ganaste!", font=('Arial', 40, 'normal'), align="right")
+    goto(40,5)
+    write("Gracias por jugar!", font=('Arial', 10, 'normal'), align="right")
+    time.sleep(5)
+    bye()
+    Terminator
 
 def tap(x, y):
-    global cont
+    global cont, cont_par
     "Update mark and hidden tiles based on tap."
     spot = index(x, y)
     mark = state['mark']
@@ -57,9 +68,15 @@ def tap(x, y):
         hide[spot] = False
         hide[mark] = False
         state['mark'] = None
+        cont_par +=1
+        print(cont_par)
     
     cont += 1
     print(cont)
+
+    if cont_par == 32:
+        draw()
+        win()
 
 
 def draw():
